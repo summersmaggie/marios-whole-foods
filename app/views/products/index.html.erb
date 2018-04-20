@@ -13,7 +13,7 @@
           <% end %>
       </div>
       <div class="col-sm-4">
-        <h3>Products with Most Reviews</h3>
+        <h3>Product with the Most Reviews</h3>
         <% @most_reviews.each do |product| %>
           <h4><%= link_to product.name, product_path(product) %></h4>
         <% end %>
