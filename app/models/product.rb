@@ -9,7 +9,7 @@ class Product < ActiveRecord::Base
     .order("reviews_count DESC")
     .limit(5))}
 
-  scope :made_in_USA, -> { where(country_of_origin: 'USA') }
+  scope :made_in_USA, -> { where(country_of_origin: 'USA').limit(5) }
 
   scope :recent_reviews, -> { order(created_at: :desc).limit(3) }
 end
