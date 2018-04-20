@@ -7,20 +7,20 @@
 _A website created using Ruby on Rails that displays products from Mario's Whole Foods, as well as reviews associated with those products._
 
 ##  Specifications
-Landing Page:
-    * The landing page includes basic information about the company and allows users to easily navigate to other areas of the site. This page also includes the three most recently added products and the product with the most reviews.
+  * Landing Page:
+    _The landing page includes basic information about the company and allows users to easily navigate to other areas of the site. This page also includes the three most recently added products and the product with the most reviews._
 
-Products
-    * The site includes a list of the tasty products that Mario sells. Each product is be clickable with a detail view. Site admins are able to add, update and delete new products. Users can click on an individual product to see its detail page, and they can add a review to a product.
+  * Products:
+    _The site includes a list of the tasty products that Mario sells. Each product is be clickable with a detail view. Site admins are able to add, update and delete new products. Users can click on an individual product to see its detail page, and they can add a review to a product._
 
-Scopes
-    * Users can view: The product with the most reviews, the three most recently added products, and all products made in the USA for buyers that want to buy local products.
+  * Scopes:
+    _Users can view: The product with the most reviews, the three most recently added products, and all products made in the USA for buyers that want to buy local products._
 
-Validations
-    * The following are validated: All fields should be filled out, including rating, rating can only be an integer between 1 and 5, and the review's content_body must be between 50 and 250 characters.
+  * Validations:
+    _The following are validated: All fields should be filled out, including rating, rating can only be an integer between 1 and 5, and the review's content_body must be between 50 and 250 characters._
 
-Seeding
-    * The project is seeded for 50 products and 250 reviews using Faker.
+  * Seeding:
+    _The project is seeded for 50 products and 250 reviews using Faker._
 
 ## Installation
 
