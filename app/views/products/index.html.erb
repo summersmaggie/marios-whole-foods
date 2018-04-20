@@ -1,18 +1,30 @@
-<div class="container" style="text-align: center">
-  <h1>Welcome to Mario's Whole Foods</h1>
-  <p>Are you hungry for something better? When it comes to what we put in and on our bodies, Mario's Whole Foods believes quality matters. Join us in the healthy food revolution!</p>
-</div>
+<div class="container">
+  <div class="container" style="text-align: center">
+    <h1>Welcome to Mario's Whole Foods</h1>
+    <p>Are you hungry for something better? When it comes to what we put in and on our bodies, Mario's Whole Foods believes quality matters. Join us in the healthy food revolution!</p>
+  </div>
 
-<div class="container" style="text-align: center">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Most Recently Added Products</h3>
+  <div class="container" style="text-align: center">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Most Recently Added Products</h3>
+      </div>
+      <div class="col-sm-4">
+        <h3>Products with Most Reviews</h3>
+      </div>
+      <div class="col-sm-4">
+        <h3>Products Made in USA</h3>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <h3>Products with Most Reviews</h3>
+  </div>
+
+  <div class="container" style="text-align: left">
+    <button type="button" class="btn btn-light btn-lg"><%= link_to "Add a Product", new_product_path %></button>
+    <h3>All Products</h3>
+    <% @products.each do |product| %>
+    <div class="col-md-4">
+      <h4><%= link_to product.name, product_path(product)%></h4>
     </div>
-    <div class="col-sm-4">
-      <h3>Products Made in USA</h3>
-    </div>
+    <% end %>
   </div>
 </div>

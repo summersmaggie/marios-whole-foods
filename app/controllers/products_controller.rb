@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  def show
-    @products = Products.all
+  def index
+    @products = Product.all
   end
 end
