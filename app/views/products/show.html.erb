@@ -3,12 +3,24 @@
   <h4>Cost: $<%= @product.cost %></h4>
   <h4>Country of Origin: <%= @product.country_of_origin %></h4>
 
-</div>
+  <div class="container">
+    <button type="button" class="btn btn-light btn-md"><%= link_to "Edit Product", edit_product_path(@product) %></button>
+    <button type="button" class="btn btn-light btn-md"><%= link_to "Delete Product", product_path(@product),
+    :data => {:confirm => "You sure?",
+      :method => "destroy"} %></button>
+    <button type="button" class="btn btn-light btn-md"><%= link_to "Add Review", new_product_review_path(@product) %></button>
+  </div>
 
-<div class="container">
-  <button type="button" class="btn btn-light btn-md"><%= link_to "Edit Product", edit_product_path(@product) %></button>
-  <button type="button" class="btn btn-light btn-md"><%= link_to "Delete Product", product_path(@product),
-                                                                      :data => {:confirm => "You sure?",
-                                                                        :method => "destroy"} %></button>
-  <button type="button" class="btn btn-light btn-md"><%= link_to "Add Review", new_product_review_path(@product) %></button>
+  <% if @product.reviews.any? %>
+    <h4>Reviews:</h4>
+    <ul>
+      <% @reviews.each do |review| %>
+        <p><%= review.author %></p>
+        <p><%= review.content_body %></p>
+        <p><%= review.rating %></p>
+      <% end %>
+    </ul>
+    <% else %>
+    <p><%= link_to "No reviews yet. Add a review.", new_product_review_path(@product) %></p>
+      <% end %>
 </div>
