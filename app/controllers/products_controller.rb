@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @most_reviews = @products.most_reviews
+    @made_in_USA = @products.made_in_USA
   end
 
   def new

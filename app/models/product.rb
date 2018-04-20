@@ -8,4 +8,6 @@ class Product < ActiveRecord::Base
     .group("products.id")
     .order("reviews_count DESC")
     .limit(5))}
+
+  scope :made_in_USA, -> { where(country_of_origin: 'USA') }
 end

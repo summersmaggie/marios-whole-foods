@@ -17,6 +17,9 @@
       </div>
       <div class="col-sm-4">
         <h3>Products Made in USA</h3>
+        <% @made_in_USA.each do | product | %>
+          <h4><%= link_to product.name, product_path(product) %></h4>
+        <% end %>
       </div>
     </div>
   </div>
