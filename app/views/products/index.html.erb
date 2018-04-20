@@ -8,6 +8,9 @@
     <div class="row">
       <div class="col-sm-4">
         <h3>Most Recently Added Products</h3>
+          <% @recent_reviews.each do |product| %>
+            <h4><%= link_to product.name, product_path(product) %></h4>
+          <% end %>
       </div>
       <div class="col-sm-4">
         <h3>Products with Most Reviews</h3>

@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
     @products = Product.all
     @most_reviews = @products.most_reviews
     @made_in_USA = @products.made_in_USA
+    @recent_reviews = @products.recent_reviews
   end
 
   def new
