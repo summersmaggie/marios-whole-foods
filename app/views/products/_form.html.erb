@@ -1,8 +1,6 @@
 <div class="container">
   <%= render "layouts/errors", :object => @product %>
 
-  <h2>Add a new product:</h2>
-
   <%= form_for @product do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>

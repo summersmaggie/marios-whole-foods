@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>Product: <%= @product.name %></h3>
+  <h4>Cost: $<%= @product.cost %></h4>
+  <h4>Country of Origin: <%= @product.country_of_origin %></h4>
+
+</div>
+
+<button type="button" class="btn btn-light btn-md"><%= link_to "Edit Product", edit_product_path(@product) %>
+  <br>
+<button type="button" class="btn btn-light btn-md"><%= link_to "Delete Product", product_path(@product),
+  :data => {:confirm => "You sure?",
+    :method => "destroy"} %></button>
+    <br>
+<button type="button" class="btn btn-light btn-md"><%= link_to "Add Review", new_product_review_path(@product) %>
